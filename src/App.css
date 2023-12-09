@@ -1,38 +1,296 @@
-.App {
+body{
+  background-color: aliceblue;
+}
+
+header {
+  background-color: #9dd9ff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header .nav{ 
+  color: black;
+  margin-left: 15px;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header .here{
+  text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 400px;
+  margin: 10% auto 0; 
+  padding: 20px;
+  border: 2px solid #9dd9ff;
+  background-color: #9dd9ff;
+  border-radius: 5px;
+}
+
+.form {
+  text-align: center;
+}
+
+.form input {
+  width: calc(100% - 20px);
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form button {
+  width: 100%;
+  background-color: #48b9ff;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #1da8ff;
+}
+
+.form p {
+  text-align: center;
+}
+
+.form .gender-checkboxes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+}
+
+.form input[type="checkbox"] {
+  margin-right: 5px;
+  width: 15px;
+  height: 10px;
+}
+
+.form .error {
+  color: red;
+  margin-top: 5px;
+}
+
+.notes{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #83cffe;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #9dd9ff;
+  min-height: 50px;
+  flex-grow: 1;
+  border-radius: 5px;
+}
+
+.note-content-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.note-title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+  flex-grow: 1;
+  margin-left: 5px;
+
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.note-title-container {
+  display: flex;
+  flex-direction: row;
+  width: 520px;
+}
+
+.note-date {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.note-actions {
+  display: flex;
+  margin-right: 10px;
+  height: 100%;
+  align-items: center;
+}
+.addnote {
+  margin-left: 42%;
+  padding: 12px 12px;
+  max-width: 250px;
+  width: 50%;
+  font-size: 16px;
+  background-color: #9dd9ff;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.add{
+  display: block;
+  align-items: center;
+}
+
+.icon{
+  background: none;
+  border: none;
+  font-size: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.title{
+  width: 79%;
+  background-color: #9dd9ff;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-left: 10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-text {
+  width: 80%;
+  height: 400px;
+  font-size: 20px;
+  background-color: #9dd9ff;
+  border: 1px solid #83cffe;
+  border-radius: 5px;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10%;
+  
 }
+
+.createNote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.editNote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.create-button,
+.back-button {
+  padding: 10px 20px;
+  width: 100px;
+  margin-right: 10px;
+  text-align: center;
+  background-color: #83cffe;
+  border: 1px solid #83cffe;
+  border-radius: 5px;
+
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.viewNote-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.icon-container {
+  display: flex;
+  gap: 10px;
+}
+
+.viewNote-title {
+  text-align: center;
+  font-size: 28px;
+}
+
+.navigation-right {
+  margin-left: auto;
+}
+
+#editNote-title {
+  width: 1150px;
+}
+
+#editNote-body {
+  width: 1165px;
+}
+
+.note-text-container {
+  width: 1200px;
+  height: 400px;
+  background-color: #9dd9ff;
+  border: 1px solid #83cffe;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  padding-left: 5px;
+}
+
+.viewNote-container {
+  width: 82%;
+}
+
+.button-back {
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  background-color: #9dd9ff;
+  border: 1px solid #83cffe;
+  border-radius: 5px;
+}
+
+

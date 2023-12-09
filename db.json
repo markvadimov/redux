@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "email": "mark@gmail.com",
+      "password": "12345678Aa",
+      "name": "Mark",
+      "nickname": "marksmorshchek",
+      "age": 45,
+      "gender": "M",
+      "date": 1702072212074,
+      "id": 1
+    }
+  ],
+  "notes": []
+}
